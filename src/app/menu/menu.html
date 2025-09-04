@@ -1,0 +1,41 @@
+<header class="menu">
+  <div class="container">
+    <div class="logo">
+      <img
+        href="#home"
+        src="assets/white-text-logo.png"
+        alt="Logo da banda T-ROX"
+      />
+    </div>
+
+    <nav class="nav-itens">
+      @for (item of menuItens; track item.id) {
+      <a [href]="item.link">{{ item.texto }}</a>
+      }
+    </nav>
+
+    <div class="redes-sociais">
+      <a
+        href="https://www.youtube.com/@t-roxband"
+        target="_blank"
+        aria-label="YouTube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/t_rox_band/"
+        target="_blank"
+        aria-label="Instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.facebook.com/profile.php?id=100086764775451"
+        target="_blank"
+        aria-label="Facebook"
+      >
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </div>
+</header>
