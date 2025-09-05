@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { Menu } from './components/menu/menu';
+import { Inicio } from './components/inicio/inicio';
 
 @Component({
   selector: 'app-root',
-  imports: [Menu],
+  imports: [Menu, Inicio],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
