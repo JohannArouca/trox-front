@@ -1,0 +1,100 @@
+.sobre {
+    background-color: var(--cinza-escuro);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .sobre-container {
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: 2rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    .sobre-texto {
+        flex: 1;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--branco);
+        }
+
+        .sobre-conteudo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+            color: var(--branco);
+            margin-bottom: 10px;
+        }
+
+        .linha {
+            border: none;
+            border-top: 2px solid var(--azul);
+            width: 100%;
+            margin: 1.5rem 0;
+        }
+    }
+
+    .sobre-imagem {
+        flex: 1;
+        position: relative;
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .sobre-icone {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            background-color: var(--roxo);
+            border-radius: 50%;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+            svg {
+                width: 45px;
+                height: 45px;
+                transform: rotate(20deg);
+            }
+        }
+
+        .sobre-logo {
+            position: absolute;
+            bottom: -25px;
+            left: -20px;
+            background-color: var(--cinza-escuro);
+            border: solid 5px var(--azul);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 50px;
+                height: auto;
+                transform: rotate(350deg);
+            }
+        }
+    }
+}
