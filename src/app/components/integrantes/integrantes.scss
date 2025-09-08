@@ -1,0 +1,119 @@
+.integrantes {
+    background-color: var(--preto);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .integrantes-container {
+        margin: 0 auto;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--cinza-claro);
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .card {
+            color: var(--cinza-claro);
+            padding: calc(var(--espaco) * 8);
+            background-color: var(--cinza-escuro);
+            border: 2px solid var(--azul);
+            border-radius: 0.9rem;
+            position: relative;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            }
+
+            .card-header {
+                display: flex;
+                flex-direction: row;
+                gap: calc(var(--espaco) * 6);
+                position: relative;
+
+                img {
+                    width: 128px;
+                    border-radius: 0.7rem;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+
+                .texto-card-header {
+                    display: flex;
+                    flex-direction: column;
+
+                    h3 {
+                        margin: 0;
+                        margin-bottom: calc(var(--espaco) * 2);
+                        color: var(--branco);
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
+
+                    .funcao {
+                        margin: 0;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: calc(var(--espaco) * 2);
+                        color: var(--roxo);
+
+                        .icone {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            svg {
+                                stroke: currentColor;
+                                fill: none;
+                                display: block;
+                            }
+                        }
+
+                        p {
+                            margin: 0;
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            &:hover .card-header img {
+                transform: scale(1.05);
+            }
+
+            .card-body {
+                text-align: justify;
+            }
+        }
+    }
+
+    .linha {
+        border: none;
+        border-top: 2px solid var(--azul);
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+}

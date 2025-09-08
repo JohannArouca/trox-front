@@ -1,0 +1,28 @@
+<section id="integrantes" class="integrantes">
+  <div class="container integrantes-container">
+    <h2>Integrantes</h2>
+
+    <div class="cards">
+      @for (integrante of integrantes; track integrante.id) {
+      <div class="card">
+        <div class="card-header">
+          <img [src]="integrante.imagem" [alt]="integrante.nome" />
+          <div class="texto-card-header">
+            <h3>{{ integrante.nome }}</h3>
+            <div class="funcao">
+              <span class="icone" [innerHTML]="integrante.iconeSafe"></span>
+              <p>{{ integrante.funcao.toUpperCase() }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <hr class="linha" />
+          <p class="descricao">{{ integrante.descricao }}</p>
+        </div>
+      </div>
+      }
+    </div>
+
+    <hr class="linha" />
+  </div>
+</section>
