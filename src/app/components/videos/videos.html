@@ -1,0 +1,33 @@
+<section id="videos" class="videos">
+  <div class="container videos-container">
+    <h2>Vídeos</h2>
+
+    <div class="cards">
+      @for (video of videos; track video.id) {
+      <div class="card" (click)="abrirVideo(video.youtubeId)">
+        <div class="thumb">
+          <img [src]="getThumb(video.youtubeId)" [alt]="video.titulo" />
+          <div class="icone-play">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+        <div class="textos-card">
+          <h3>{{ video.titulo }}</h3>
+          <p>{{ video.subtitulo }}</p>
+        </div>
+      </div>
+      }
+    </div>
+
+    <hr class="linha" />
+
+    <div class="texto-youtube">
+      <h4>Não perca nosso vídeos</h4>
+      <p>
+        Se inscreva no nosso canal e ative o sininho para receber notificações
+        de todos os nossos vídeos.
+      </p>
+      <button><i class="fab fa-youtube"></i>Acessar canal</button>
+    </div>
+  </div>
+</section>

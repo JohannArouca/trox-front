@@ -1,0 +1,155 @@
+.videos {
+    background-color: var(--cinza-escuro);
+    min-height: 100vh;
+
+    .videos-container {
+        margin: 0 auto;
+        flex-direction: column;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.8rem;
+            color: var(--cinza-claro);
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            width: 100%;
+
+            .card {
+                flex: 1 1 calc((100% - (2rem * 3)) / 3);
+                max-width: calc((100% - (2rem * 3)) / 3);
+                color: var(--cinza-claro);
+                background-color: var(--preto);
+                border: 2px solid var(--azul);
+                border-radius: 0.9rem;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+
+                @media (max-width: 992px) {
+                    flex: 0 1 calc((100% - 2rem) / 2);
+                    max-width: calc((100% - 2rem) / 2);
+                }
+
+                @media (max-width: 576px) {
+                    flex: 0 1 100%;
+                    max-width: 100%;
+                }
+
+                .thumb {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 0.9rem 0.9rem 0 0;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        object-fit: cover;
+                        aspect-ratio: 16 / 9;
+                        border-radius: 0.9rem 0.9rem 0 0;
+                        transition: transform 0.5s ease;
+                    }
+
+                    .icone-play {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background-color: var(--roxo);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--branco);
+                        opacity: 0.95;
+
+                        i {
+                            font-size: 25px;
+                            line-height: 1;
+                        }
+                    }
+                }
+
+                .textos-card {
+                    padding: calc(var(--espaco) * 5);
+
+                    h3 {
+                        margin: 0;
+                        margin-bottom: 10px;
+                        font-size: 1.25rem;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                &:hover {
+                    border-color: var(--roxo);
+
+                    img {
+                        transform: scale(1.05);
+                    }
+
+                    h3 {
+                        color: var(--roxo);
+                    }
+                }
+            }
+        }
+
+        .linha {
+            border: none;
+            border-top: 2px solid var(--azul);
+            width: 100%;
+            margin: 1.5rem 0;
+        }
+
+        .texto-youtube {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--cinza-claro);
+
+            h4 {
+                margin: 0;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+
+            p {
+                margin: 0;
+                margin-bottom: 0.8rem;
+                font-size: 1.1rem;
+            }
+
+            button {
+                margin: 0;
+                padding: calc(var(--espaco) * 2);
+                padding-inline: calc(var(--espaco) * 5);
+                border-radius: 0.6rem;
+                color: var(--branco);
+                background-color: var(--roxo);
+                font-size: 1.2rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--roxo-escuro);
+                }
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
