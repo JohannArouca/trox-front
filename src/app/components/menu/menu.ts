@@ -28,7 +28,7 @@ export class Menu {
       link: '#videos',
       texto: 'Vídeos',
     },
-    {
+    /* {
       id: 5,
       link: '#shows',
       texto: 'Shows',
@@ -37,6 +37,6 @@ export class Menu {
       id: 6,
       link: '#contato',
       texto: 'Contato',
-    },
+    }, */
   ];
 }
