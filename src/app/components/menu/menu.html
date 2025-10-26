@@ -1,5 +1,9 @@
 <header class="menu">
   <div class="container">
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir menu">
+      <i class="fas" [ngClass]="menuAberto ? 'fa-times' : 'fa-bars'"></i>
+    </button>
+
     <div class="logo">
       <img
         href="#home"
@@ -7,12 +11,6 @@
         alt="Logo da banda T-ROX"
       />
     </div>
-
-    <nav class="nav-itens">
-      @for (item of menuItens; track item.id) {
-      <a [href]="item.link">{{ item.texto }}</a>
-      }
-    </nav>
 
     <div class="redes-sociais">
       <a
@@ -38,4 +36,10 @@
       </a>
     </div>
   </div>
+
+  <nav class="nav-itens" [ngClass]="{ aberto: menuAberto }">
+    @for (item of menuItens; track item.id) {
+    <a [href]="item.link" (click)="fecharMenu()">{{ item.texto }}</a>
+    }
+  </nav>
 </header>
