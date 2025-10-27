@@ -12,6 +12,12 @@
       />
     </div>
 
+    <nav class="nav-itens" [ngClass]="{ aberto: menuAberto }">
+      @for (item of menuItens; track item.id) {
+      <a [href]="item.link" (click)="fecharMenu()">{{ item.texto }}</a>
+      }
+    </nav>
+
     <div class="redes-sociais">
       <a
         href="https://www.youtube.com/@t-roxband"
@@ -36,10 +42,4 @@
       </a>
     </div>
   </div>
-
-  <nav class="nav-itens" [ngClass]="{ aberto: menuAberto }">
-    @for (item of menuItens; track item.id) {
-    <a [href]="item.link" (click)="fecharMenu()">{{ item.texto }}</a>
-    }
-  </nav>
 </header>
