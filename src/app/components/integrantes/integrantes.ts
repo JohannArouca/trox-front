@@ -46,7 +46,7 @@ export class Integrantes {
         funcao: 'Guitarra',
         imagem: 'assets/integrantes/roberto.jpg',
         descricao:
-          'Psicólogo, filósofo, psicanalista e professor universitário, Roberto é, também, músico. Foi vocalista de sua primeira banda ainda com 12 anos. Paralelo aos vocais, sempre estudou guitarra e violão, de início didaticamente e, mais tarde, com grandes guitarristas do Brasil. Entre os estilos preferidos estão o Rock (sobretudo dos anos 1960 a 1990), o Blues e o Jazz. No decorrer da carreira, integrou várias bandas e, atualmente, além da T-Rox, é também guitarrista e vocalista da Banda Xevius, de Pará de Minas.',
+          'Psicólogo, filósofo, psicanalista e professor universitário, Roberto é, também, músico. Foi vocalista de sua primeira banda ainda com 12 anos. Paralelo aos vocais, sempre estudou guitarra e violão, de início autodidaticamente e, mais tarde, com grandes guitarristas do Brasil. Entre os estilos preferidos estão o Rock (sobretudo dos anos 1960 a 1990), o Blues e o Jazz. No decorrer da carreira, integrou várias bandas e, atualmente, além da T-Rox, é também guitarrista e vocalista da Banda Xevius, de Pará de Minas.',
       },
       {
         id: 3,
