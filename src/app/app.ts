@@ -4,10 +4,11 @@ import { Inicio } from './components/inicio/inicio';
 import { Sobre } from './components/sobre/sobre';
 import { Integrantes } from './components/integrantes/integrantes';
 import { Videos } from './components/videos/videos';
+import { Contato } from './components/contato/contato';
 
 @Component({
   selector: 'app-root',
-  imports: [Menu, Inicio, Sobre, Integrantes, Videos],
+  imports: [Menu, Inicio, Sobre, Integrantes, Videos, Contato],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

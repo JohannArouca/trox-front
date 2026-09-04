@@ -33,12 +33,12 @@ export class Menu {
       id: 5,
       link: '#shows',
       texto: 'Shows',
-    },
+    }, */
     {
       id: 6,
       link: '#contato',
       texto: 'Contato',
-    }, */
+    },
   ];
 
   menuAberto = false;
